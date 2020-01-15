@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Calculator</title>
-    </head>
-    <body>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="container">
       <h1>Calculator</h1>
-      <script src="js/scripts.js"></script> 
-    </body>
+    <div class="row">
+      <div class="col-md-6">
+
+        <form id="add">
+          <h3>Addition</h3>
+          <div class="form-group">
+            <label for="first">1st number</label>
+            <input id="first" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="second">2nd number</label>
+            <input id="second" class="form-control" type="text">
+          </div>
+          <button class="btn btn-default" type="submit">Add!</button>
+        </form>
+        <div id="addOutput">
+        </div>
+      </div>
+      <div class="col-md-6">
+          <form id="subtract">
+            <h3>Subtraction</h3>
+            <div class="form-group">
+              <label for="subtractFirst">1st number</label>
+              <input id="subtractFirst" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="subtractSecond">2nd number</label>
+              <input id="subtractSecond" class="form-control" type="text">
+            </div>
+            <button class="btn btn-default" type="submit">Subtract!</button>
+          </form>
+          <div id="subtractOutput">
+          </div>
+        </div>
+        <div class="col-md-6">
+            <form id="multiply">
+              <h3>Multiplication</h3>
+              <div class="form-group">
+                <label for="multiplyFirst">1st number</label>
+                <input id="multiplyFirst" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="multiplySecond">2nd number</label>
+                <input id="multiplySecond" class="form-control" type="text">
+              </div>
+              <button class="btn btn-default" type="submit">Multiply!</button>
+            </form>
+            <div id="multiplyOutput">
+            </div>
+          </div>
+          <div class="col-md-6">
+              <form id="divide">
+                <h3>Division</h3>
+                <div class="form-group">
+                  <label for="divideFirst">1st number</label>
+                  <input id="divideFirst" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="divideSecond">2nd number</label>
+                  <input id="divideSecond" class="form-control" type="text">
+                </div>
+                <button class="btn btn-default" type="submit">Divide</button>
+              </form>
+              <div id="divideOutput">
+              </div>
+            </div>
+    </div>
+  </div>
+</body>
+
 </html>
