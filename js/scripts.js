@@ -20,39 +20,64 @@ var divide = function(number1, number2) {
 //Everything blow this line is user interface logic:
 
 $(document).ready(function() {
-  
-  $("form#add").submit(function() {
-    
-    var number1 = parseInt($("#first").val());
-    var number2 = parseInt($("#second").val());
-    var result = add(number1, number2);
-    $("#addOutput").text(result);
+  $("form#calculator").submit(function() {
     event.preventDefault();
-    $("#first").val("");
-    $("#second").val("");
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var operator = $("input:radio[name=operator]:checked").val();
+    var result;
+    if (operator === "add") {
+      result = add(number1, number2); 
+    } else if (operator === "subtract") {
+      result = subtract(number1, number2);
+    } else if (operator === "multiply") {
+      result = multiply(number1, number2);
+    } else if (operator === "divide") {
+      result = divide(number1, number2);
+    }
+    $("#output").text(result);
   });
-
-  $("form#subtract").submit(function() {
-    var number1 = parseInt($("#subtractFirst").val());
-    var number2 = parseInt($("#subtractSecond").val());
-    var result = subtract(number1, number2);
-    $("#subtractOutput").text(result);
-    event.preventDefault();
-    $("#subtractFirst").val("");
-    $("#subtractSecond").val("");
-  });
-
-  $("form#divide").submit(function() {
-    var number1 = parseInt($("#divideFirst").val());
-    var number2 = parseInt($("#divideSecond").val());
-    var result = divide(number1, number2);
-    $("#divideOutput").text(result);
-    event.preventDefault();
-    $("#divideFirst").val("");
-    $("#divideSecond").val("");
-  });
-  
 });
+
+
+
+
+
+
+// $(document).ready(function() {
+  
+//   $("form#add").submit(function() {
+    
+//     var number1 = parseInt($("#first").val());
+//     var number2 = parseInt($("#second").val());
+//     var result = add(number1, number2);
+//     $("#addOutput").text(result);
+//     event.preventDefault();
+//     $("#first").val("");
+//     $("#second").val("");
+//   });
+
+//   $("form#subtract").submit(function() {
+//     var number1 = parseInt($("#subtractFirst").val());
+//     var number2 = parseInt($("#subtractSecond").val());
+//     var result = subtract(number1, number2);
+//     $("#subtractOutput").text(result);
+//     event.preventDefault();
+//     $("#subtractFirst").val("");
+//     $("#subtractSecond").val("");
+//   });
+
+//   $("form#divide").submit(function() {
+//     var number1 = parseInt($("#divideFirst").val());
+//     var number2 = parseInt($("#divideSecond").val());
+//     var result = divide(number1, number2);
+//     $("#divideOutput").text(result);
+//     event.preventDefault();
+//     $("#divideFirst").val("");
+//     $("#divideSecond").val("");
+//   });
+  
+// });
 
 
 
